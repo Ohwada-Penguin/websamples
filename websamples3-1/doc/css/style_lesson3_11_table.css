@@ -1,0 +1,69 @@
+@charset "utf-8"; 
+
+/*共通css*/
+*{
+    font-family:'Bitter','serif';
+}
+
+table{
+        /*border同士の隙間を0にする。borderは消えない。*/
+        border-spacing:0;
+        /*border同士を重ねる*/
+        border-collapse:collapse;
+}
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+
+/*-----body部のcss記述-----*/
+table,th,td{
+    border:1px solid #000000;
+    /*border同士の隙間を0にする。borderは消えない。*/
+    border-spacing:0;
+    /*border同士を重ねる*/
+    border-collapse:collapse;
+}
+
+table{
+    width:70vw;
+    margin:0 auto 0;
+}
+
+table,th,td{
+    /*tableの線は控えめのほうがいい*/
+    border:1px solid #cccccc;
+    /*セル内の内余白を上下左右0.5emで指定*/
+    padding:0.5em;
+}
+
+table caption{
+    font-size:0.8em;
+    color:#666666;
+}
+
+.col-1{
+    width:20%;
+}
+.col-2{
+    width:40%;
+}
+.col-3{
+    width:40%;
+}
+
+th{
+    background-color:#a50;
+    color:#fff;
+}
+
+table.hoge-1{
+    margin-top:30px;
+}

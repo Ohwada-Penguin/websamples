@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>セルの縦結合</title>
+    </head>
+    <body>
+        <section>
+            <h1>会員住所</h1>
+            <!--table開始-->
+            <table border="1">
+            <caption>会員住所</caption>
+                <!--tbody開始-->
+                <tbody>
+                    <!--一行目-->
+                    <tr>
+                        <th scope="row">会員番号</th>
+                        <td>000001</td>
+                    </tr>
+                    <!--二行目-->
+                    <tr>
+                        <th scope="row">氏名</th>
+                        <td>コウテイペンギン</td>
+                    </tr>
+                    <!--三行目-->
+                    <tr>
+                        <th scope="row" rowspan="2">住所</th>
+                        <td>〒111-1234</td>
+                    </tr>
+                    <!--四行目(結合されるセル)-->
+                    <tr>
+                        <td>南極ウェッデル海</td>
+                    </tr>
+                </tbody>
+                <!--tbody終了-->
+            </table>
+            <!--table終了-->
+        </section>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>様々なプロパティ</title>
+
+        <!--GoogleFontsの導入-->
+        <!--記述箇所はcssより先に記述する。
+        理由はフォントデータを参照して読み込むための記述なのでcssより先に記述して読み込む必要がある。-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;900&display=swap" rel="stylesheet">
+        <!--ここまでGoogleFontsの記述-->
+
+        <!--<meta name="discription" content="ページの要約した内容を記述"-->
+        <link rel="stylesheet" href="../css/style_lesson4_03_various-property.css">
+        <!--<script src="JavaScriptファイルのパス></script>-->
+    </head>
+
+    <body>
+        <div class="bg-001">
+            <p>.bg-001<br>
+            背景画像を敷き詰める
+            </p>
+        </div>
+
+        <div class="bg-002">
+            <p>
+                .bg-002<br>
+                背景色と背景画像
+            </p>
+        </div>
+
+        <div class="px">
+            150px*50px<br>
+            px指定は背景画像自体のサイズを調整します。縦横どちらかをautoにすれば画像は歪みません
+        </div>
+
+        <div class="per">
+            50%*50%<br>
+            %指定は領域(親要素)に対しての割合です。縦横取りたかをutoにすれば画像は歪みません。
+        </div>
+
+        <div class="cover">
+            cover<br>
+            比を保ったまま領域全面を覆う最小サイズ。一部が見切れます。
+        </div>
+
+        <div class="contain">
+            contain<br>
+            比を保ったまま画像を最大限大きく表示するサイズ。上下か左右に余白が出ます。
+        </div>
+
+        <div class="layer">
+            背景画像を重ねる<br>
+            背景は先に書いた指定が手前になります。
+        </div>
+        <div class="gradation"></div>
+
+    </body>
+</html>

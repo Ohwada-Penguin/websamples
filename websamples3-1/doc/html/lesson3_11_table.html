@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>テーブル</title>
+
+        <!--GoogleFontsの導入-->
+        <!--記述箇所はcssより先に記述する。
+        理由はフォントデータを参照して読み込むための記述なのでcssより先に記述して読み込む必要がある。-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700;900&display=swap" rel="stylesheet">
+        <!--ここまでGoogleFontsの記述-->
+
+        <!--<meta name="discription" content="ページの要約した内容を記述"-->
+        <link rel="stylesheet" href="../css/style_lesson3_11_table.css">
+        <!--<script src="JavaScriptファイルのパス></script>-->
+    </head>
+
+    <body>
+        <table>
+            <!--captionは何のtableなのかをわかりやすくするためのもの。いわゆる表題のこと。-->
+            <caption>手ぶらでBBQ料金比較</caption>
+            <thead>
+                <tr>
+                    <!--&nbsp;(半角スペース)を入れることで空セルとして扱っている。何も入れないと問題が起こるらしい-->
+                    <th class="col-1">&nbsp;</th>
+                    <th class="col-2">コスパパック</th>
+                    <th class="col-3">ボリュームパック</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                    <th scope="row">金額</th>
+                    <td>3,000円/人</td>
+                    <td>5,000円/人</td>
+                </tr>
+                <tr>
+                    <th scope="row">食材</th>
+                    <td>無し(持ち込み)</td>
+                    <td>肉200g+野菜</td>
+                </tr>
+                <tr>
+                    <th scope="row">機材</th>
+                    <td>コンロ一式</td>
+                    <td>コンロ一式+テントセット</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <table class="hoge-1">
+            <!--おさらい:tableタグには<thead>と<tbody>、<tfoot>を付けるとcssなんかや色々楽になる。-->
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <!--colspan="x"でxカラム分のセルを横に結合。セル数に要注意-->
+                    <th colspan="2">ar</th>
+                    <th>br</th>
+                    <!--<th>cr</th>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">ac</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="2">bc</th>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <!--<th scope="row">cc</th>-->
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

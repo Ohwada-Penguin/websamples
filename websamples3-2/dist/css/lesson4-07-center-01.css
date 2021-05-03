@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----*/
+/*-----*/
+
+/*-----記述-----*/
+div{
+    width:100%;
+    padding:1em;
+    background:#eee;
+}
+
+p{
+    width:200px;
+    height:200px;
+    background:#00c;
+    color:#fff;
+}
+
+/*<p>要素を親要素の中央に寄せる。*/
+p{
+    margin:0 auto;
+}
+
+/*<p>の子要素の<span>を中央に寄せる*/
+p{
+    text-align:center;
+}
+
+/*ちなみにこれは利かない*/
+span{
+    text-align:center;
+}

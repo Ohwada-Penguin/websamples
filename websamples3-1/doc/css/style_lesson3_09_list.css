@@ -1,0 +1,99 @@
+@charset "utf-8"; 
+/*-----start utility css-----*/
+*{
+    font-family:'Bitter','serif';
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+/*-----end utility css-----*/
+
+section{
+    width:600px;
+    margin:0 auto;
+    padding:2em;
+    background-color:#ffebf0;
+    border:2px dotted #000000;
+}
+
+h1{
+    margin:0 0 1em;/*上　左右　下*/
+}
+
+ul{
+    border:10px solid #aae5e7;
+    padding:1em 1em 0;
+    list-style:none;
+}
+
+ul li{
+    border-bottom:4px dotted #6baeb3;
+    margin:0 0 4px 0;
+}
+
+ol{
+    border:10px solid #ffc43d;
+    padding:1em 1em 0;
+    padding:20px 40px 20px;
+}
+
+ol li{
+    padding:0 0 35px 0;
+    margin:0 0 15px;
+    background:url("../img/arrow_bottom.png") left bottom no-repeat;
+    background-size:auto 1.5em;
+}
+
+/*
+CSS の :last-of-type 疑似クラスは、兄弟要素のグループの中でその種類の最後の要素を表します。
+この場合はolの中の最後のli要素を意味する。兄弟要素がわからなければ調べるべし。
+ちなみにこのcssに対応するhtml記述部分は<li>ご出発</li>だよ。
+*/
+ol li:last-of-type{
+    padding-bottom:0;
+    margin-bottom:0;
+    /*
+    backgroundプロパティが透明になる(不可視になる)指定
+    こうすることで各li要素に設定したbackground:url("...")が見えなくなってるよ。
+    */
+    background:transparent;
+    
+}
+
+/*オリジナルアイコン*/
+.penguin_icon_01 li::before{
+    /*疑似要素にはcontentは必須項目。必要ないなら空を入れておく。*/
+    content:"";
+    /*ブロック要素にすると改行してしまうよ*/
+    /*display:block;*/
+    display:inline-block;
+    background:url("../img/penguin_icon_01.png") no-repeat;
+    background-size:contain;
+    width:1.5em;
+    height:1.2em;
+    margin:auto 4px auto 0;
+    /*垂直位置を指定*/
+    vertical-align:middle;
+    
+}
+
+@media screen and (max-width:480px){
+    *{
+        font-size:clamp(12px,5vw,1.5rem);
+    }
+}

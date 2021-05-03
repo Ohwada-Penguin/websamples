@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Videos&nbsp;|&nbsp;ペンギン画像蒐集家｢Penguins｣</title>
+        <!--GoogleFontsの導入-->
+        <!--記述箇所はpenguins_style.cssより先に記述する。
+            理由はフォントデータを参照して読み込むための記述なのでcssより先に記述して読み込む必要がある。-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+        <!--ここまでGoogleFontsの記述-->
+        <link href="../css/penguins_style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body id="videos">
+        <!--ヘッダー-->
+        <header>
+            <!--ロゴ-->
+            <div class="logo">
+                <a href="penguins_index.html"></a>
+                    <img src="../img/penguins_logo_small_2_white.png" alt="penguins">
+                </a>
+            </div>
+            <!--ナビゲーション-->
+            <nav>
+                <ul class="globalNav">
+                    <li><a href="penguins_portfolio.html">Portfolio</a></li>
+                    <li><a href="penguins_about.html">About</a></li>
+                    <li><a href="penguins_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="wrap" class="clearFix">
+            <!--コンテンツ-->
+            <div class="content">
+                <!--メインエリア-->
+                <div class="main">
+                    <h1>Videos</h1>
+                    <p>
+                        これまでに拾ってきた動画をペンギン別に掲載しています。
+                    </p>
+                    <div id="videos_emperorPenguin">
+                        <!--動画01のsection-->
+                        <section id="penguin_videos_01">
+                            <h2 class="icon">Emperor&nbsp;Penguin</h2>
+                            <iframe class="youtubeVideos" src="https://www.youtube.com/embed/eQquEh6zQ5c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </section>
+                        <!--動画02のsection-->
+                        <section id="penguin_videos_02">
+                            <iframe class="youtubeVideos" src="https://www.youtube.com/embed/Fvf6FACFPaw?list=PLSa8b64jlQMKQJUgZLQ7QCMpmLqxr_-Fr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </section>
+                    </div>
+                    <div id="videos_emperorPenguinChicks">
+                        <!--動画03のsection-->
+                        <section id="penguin_videos_03">
+                            <h2 class="icon">Emperor&nbsp;Penguin&nbsp;Chicks</h2>
+                            <iframe class="youtubeVideos" src="https://www.youtube.com/embed/0MtHOwMl3ws?list=PLSa8b64jlQMKQJUgZLQ7QCMpmLqxr_-Fr" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </section>
+                    </div>
+                </div>
+                <!--サイドバーエリア-->
+                <aside class="sidebar">
+                    <!--サイドバーエリアのセクション1(photos)-->
+                    <section>
+                        <h2>Photograph</h2>
+                        <ul>
+                            <li><a href="penguins_photoGraph.html#emperorPenguin" target="emperorPenguin">コウテイペンギン-EmperorPenguin</a></li>
+                            <li><a href="penguins_photoGraph.html#kingPenguin" target="kingPenguin">オウサマペンギン-KingPenguin</a></li>
+                            <li><a href="penguins_photoGraph.html#adeliePenguin" target="adeliePenguin">アデリーペンギン-AdeliePenguin</a></li>
+                        </ul>
+                    </section>
+                    <!--サイドバーエリアのセクション2(videos)-->
+                    <seciton>
+                        <h2>Videos</h2>
+                        <ul>
+                            <li><a href="penguins_videos.html#videos_emperorPenguin" target="videos">Videos</a></li>
+                            <li><a href="penguins_videos.html#videos_emperorPenguinChicks">Emperor&nbsp;Penguin&nbsp;Chicks</a></li>
+                        </ul>
+                    </seciton>
+                    
+                </aside>
+
+            </div>
+        </div>
+
+        <footer>
+            <samll>(C)2021 PENGUINISM.</samll>
+        </footer>
+    </body>
+</html>

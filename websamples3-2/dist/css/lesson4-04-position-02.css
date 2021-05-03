@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*-----*/
+
+body{
+    background: #e2d0bc;
+}
+
+section{
+    width: 1000px;
+    max-width:100%;
+    height:600px;
+    margin: 0 auto;
+    /*sectionを親要素とする子要素の基準を設定*/
+    position:relative;
+}
+
+img{
+    display: block;
+    width:100%;
+}
+/*-----*/
+
+
+
+/*-----記述-----*/
+.text-box{
+    font-family:"游明朝",YuMincho,serif;
+    width:600px;
+    max-width:60%;
+    padding:20px;
+    background:#fff;
+    /*
+        box-shadowはボックスに対して影をつけるプロパティ。
+        プロパティ値は半スペ区切りで[Xオフセット] [Yオフセット] [ぼかしの幅] [広がりの幅] [色]
+        となっている。
+        ちなみに[色]のrgbaのaはalphaで、不透明度のことだよ。値が大きいほど影が濃くなる。
+    */
+    box-shadow:0 0 20px 2px rgba(0,0,0,0.0.2);
+    position:absolute;
+    top:7%;/*親要素のheightに対する割合の移動距離になってる。height:600px;だから、7%は42pxと同等*/
+    left:0;
+    /*border:2px dotted #000;*/
+}
+
+h2{
+    font-size:1.8em;
+    margin-bottom:0.5em;
+}
+
+.img-box{
+    width:70%;
+    /*margin-leftで左側に外余白を設けることで右側に寄せて見せているよ。*/
+    margin-left:30%;
+}
+
+/*最大画面幅が480pxの場合のメディアクエリなので、要は480pxより小さい端末用*/
+@media screen and (max-width:480px){
+    section{
+        width:100%;
+        height:600px;
+    }
+
+    .text-box{
+        width:90%;
+        /*topとleftをモバイル用に数値を変更*/
+        /*ちなみにtopとかleftはpositionのプロパティ値。上から**の距離を移動、左から**の距離を移動みたいな。*/
+        top:60vw;
+        left:0;
+    }
+
+    h2{
+        font: size 1.3em;
+        margin-bottom:0.5em;
+    }
+
+    .img-box{
+        width:100%;
+        /*margin-left:30%で右寄せにしていたものを０にしているよ。*/
+        margin-left:0;
+    }
+
+}

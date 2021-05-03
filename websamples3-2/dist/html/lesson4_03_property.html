@@ -1,0 +1,65 @@
+<DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ぷろぱてぃー</title>
+        <link href="../css/lesson4_03_property.css" rel="stylesheet" type="text/css">
+    </head>
+</html>
+
+<body>
+    <div class="bg-001">
+        <p>.bg-001<br>背景画像を敷き詰める</p>
+    </div>
+
+    <div class="bg-002">
+        <p>.bg-002<br>背景色と背景画像</p>
+    </div>
+
+    <div class="px">
+        150px*50px<br>
+        px指定は背景画像自体のサイズを調整します。<span class="attention">縦横どちらかをautoにすれば画像は歪みません。</span>
+    </div>
+
+    <div class="per">
+        50%*50%<br>
+        %指定は<abbr class="attention" title="親要素のことです">領域</abbr>に対しての割合です。
+    </div>
+
+    <div class="cover">
+        cover<br>
+        比率を保ったまま<abbr class="attention" title="親要素全面のこと">領域全面</abbr>を覆う最小サイズ。一部が見切れます。
+    </div>
+
+    <div class="contain">
+        contain<br>
+        比率を保ったまま画像を<span class="attention">親要素に入る範囲で</span>最大限大きく表示するサイズ。<br>
+        上下左右に余白が出ます。
+    </div>
+
+    <div class="bg-001-layer">
+        bg-001 背景画像を重ねる。<br>
+        背景は先に書いた指定が手前になります。<br>
+        <pre>
+        .bg-001-layer{
+            background:
+                url("../img/4-03_img/bg-cat.png") left bottom no-repeat,/*カンマ区切り忘れずになァ*/
+                url("../img/4-03_img/bg-stripe.png") center center repeat;
+        }
+        </pre>
+    </div>
+
+    <div class="bg-002-gradation">
+        bg-002 グラデーション<br>
+        ほんのり自然なグラデーションにするのがポイントです。<br>
+        <br>
+        <pre>
+        .bg-002-gradation{
+            background:
+            url("../img/4-03_img/bg-frame.png") center center repeat,
+            /*linear-gradient(角度(デフォは180度(真上から下へグラデ),１色目,２色目)*/
+            linear-gradient(-135deg,#ffd5c9,#ff6464);
+        }
+        </pre>
+    </div>
+</body>

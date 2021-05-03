@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+/*navボックスのスタイル設定*/
+header nav{
+    /*背景色を設定*/
+    background-color:aliceblue;
+    /*内余白を15pxに設定*/
+    padding:15px;
+    /*外余白を0pxに設定*/
+    margin:0px;
+}
+
+/*ナビゲーションのulボックスのスタイル設定*/
+header nav ul{
+    /*上下外余白を0pxに設定しボックスをセンタリング*/
+    margin:0px auto;
+    /*内余白を0pxに設定*/
+    padding:0px;
+    /*ボックスサイズをボーダー基準に設定*/
+    box-sizing:border-box;
+    /*ボックス幅を100％に設定*/
+    width:100%;
+     /*対象要素をブロックまたテキストとして扱うかの設定*/
+    display:flex;
+    /*flexを設定された要素の並び方向を設定*/
+    flex-direction:row;
+    /*フレックスアイテムを単一行に押し込むか、あるいは複数行に折り返してもよいかを指定する。折り返しを許可する場合は、行を積み重ねる方向の制御も可能。*/
+    flex-wrap:wrap;
+}
+
+/*ナビゲーションのliボックスのスタイル設定*/
+header nav li{
+    /*liの装飾を無しに設定。装飾って横の●のことだよ。*/
+    list-style:none;
+    /*liの背景色を設定*/
+    background-color:turquoise;
+    /*liの中の文字列をセンタリング*/
+    text-align:center;
+    /*内余白を10pxに設定*/
+    padding:10px;
+    /*ボックスサイズをボーダー基準に設定*/
+    box-sizing:border-box;
+    margin:2px;
+    flex:1 0 140px;
+}
+
+/*liボックス内のリンクのスタイル設定*/
+header nav li a{
+    /*文字色を白に設定*/
+    color:white;
+    /*リンクのアンダーライン装飾を無しに設定*/
+    text-decoration-line:none;
+}
+
+/*main内のsectionボックスのスタイル設定*/
+main section{
+    /*背景色を設定*/
+    background-color:gainsboro;
+    /*内余白を15pxに設定*/
+    padding:15px;
+}
+
+/*section内のh2ボックスのスタイル設定*/
+main section h2{
+    /*外余白を0pxに設定*/
+    margin:0px;
+}

@@ -1,0 +1,60 @@
+@charset "utf-8"; 
+
+*{
+    /*デフォルトフォントの指定(俺好み)*/
+    font-family:'Bitter','serif';
+    /*
+    box-sizing:hoge;で要素全体の幅と高さの計算方法を指定
+    box-sizing:border-box;でボックスサイズ(widthとheight)はボーダー領域までとなる。
+    */
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+
+/*-----以下body部のcss記述-----*/
+
+.margin-top + .margin-top{
+    margin-top:150px;
+}
+
+.relative{
+    padding: 10px;
+    width: 240px;
+    background: #ccf;
+}
+
+img{
+    /*imgタグはインライン要素だからここでブロック要素として扱ってるよ*/
+    display:block;
+    width:240px;
+    /*positionのプロパティ値はrelativeとabsoluteがあるよ*/
+    /*relativeは「本来配置される位置」から移動する相対位置を指定する*/
+    /*absoluteは絶対位置での指定になる*/
+    position:relative;
+    /*上からx(単位)分下へ移動*/
+    top:60px;
+    /*左からx(単位)分右へ移動*/
+    left:100px;
+}
+
+section.absolute{
+    margin: 0;
+    padding: 10px;
+    width: 240px;
+    background: #fcf;
+}
+
+/*-----以上body部のcss記述-----*/

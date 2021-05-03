@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*-----*/
+
+body{
+    background: #e2d0bc;
+}
+
+section{
+    margin: 0;
+    padding: 10;
+    width: 260px;
+    background: #eee;
+}
+h1{
+    margin:0;
+    color: #779;
+}
+
+img{
+    display: block;
+    width:240px;
+}
+/*-----*/
+
+
+
+/*-----記述-----*/
+
+
+
+/*relativeは本来配置される位置から＊px移動するって感じの相対位置になる*/
+#img-relative{
+    position: relative;
+    top: 60px;
+    left: 100px;
+}
+
+/*absoluteは絶対位置指定なので、本来配置される位置とは無関係に指定できる。*/
+/*注意はfloatみたいにabsolute指定された要素は浮くので親要素に認識されない。*/
+/*
+    position: absolute や position: fixed が指定された要素は、通常のレイアウト処理から除外されるため、
+    あたかも要素が存在していないかのように後続要素や親要素がレイアウトされます。
+    float 等とは異なり、親要素の枠の外にでも配置できますから、その高さを親要素に考慮させるというのは無理な話です。
+    要素を横に並べる用途で使いたい場合、親要素に height を指定したり、
+    position: absolute ではない要素も残すなどして、別途高さを確保しなければいけません。
+*/
+/*だそうだ。*/
+#img-absolute{
+    position:absolute;
+    left:100px;
+}
+
+/*隣接セレクタだよ*/
+/*sectionの後に続く直後のsectionに対して以下のCSSを適応する*/
+section+section{
+    margin-top:100px;
+}
+
+.hoge-01{
+    margin-top:300px;
+    /*親要素をposition:relative;にすることで、その子要素がabsoluteの場合の基準になる。*/
+    /*とはいえ、absoluteは結局レイアウト処理から除外される*/
+    /*親要素に縮んで欲しくない場合はrelativeを使う。*/
+    position:relative;
+}
+
+#img-relative-and-absolute{
+    position:absolute;
+    top:100px;
+    left:100px;
+}
+#test-box{
+    border:1px dashed #000;
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:0;
+    left:0;
+}

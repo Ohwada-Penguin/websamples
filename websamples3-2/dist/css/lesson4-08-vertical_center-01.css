@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----*/
+/*-----*/
+
+/*-----記述-----*/
+
+div{
+    width:100%;
+    padding:1em;
+    background:#eee;
+}
+
+p{
+    width:200px;
+    height:200px;
+    background:#ff0;
+    color:#ef476f;
+}
+
+span{
+    font-size:20px;
+
+    border:1px dotted #e16b8c;
+}
+
+img{
+    border:1px dotted #e16b8c;
+}
+
+/*<img>と<span>の垂直方向を中央に揃える*/
+/*
+注意したいのが
+vertical-align:center;ではなく
+vertial-align:middle;であること。
+*/
+img,span{
+    vertical-align:middle;
+}
+
+p+p{
+    margin-top:50px;
+}
+
+/*display:flex;で中央揃え*/
+.test-p-1{
+    /*フレックスコンテナの設定*/
+    display:flex;
+    /*フレックスアイテムの垂直位置*/
+    align-items:center;
+    /*
+    CSS の justify-content プロパティは、
+    フレックスコンテナーの主軸およびグリッドコンテナーのインライン軸に沿って、
+    中身のアイテムの間や周囲に間隔を配置する方法を定義します。
+    だそうだ。
+    */
+    justify-content:center;
+}
+
+div{
+    position:relative;
+    height:300px;
+}

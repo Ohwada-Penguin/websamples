@@ -1,0 +1,77 @@
+@charset "utf-8"; 
+
+*{
+    font-family:'Bitter','serif';
+}
+
+a{
+    /*要素をブロック要素として扱う*/
+    display:block;
+    /*大きさを指定*/
+    width:200px;
+    margin:40px;
+    /*内余白の設定*/
+    padding:1em;
+    /*テキストの水平位置を指定*/
+    text-align:center;
+    /*border:1px solid #000000;*/
+}
+
+a.text-link{
+    color:#008000;
+    /*text-decoration:underlineはデフォルトcssで指定されていることが多い*/
+    text-decoration:underline;
+    border:1px solid #000000;
+}
+
+a.button-link{
+    /*背景色を黄色に*/
+    background:#ffd700;
+    /*下線無しに*/
+    text-decoration:none;
+    /*文字色をオレンジに*/
+    color:#ff4500;
+    /*文字サイズを少し大きく*/
+    font-size:20px;
+}
+
+a.button-link2{
+    background:#1e90ff;
+    text-decoration:none;
+    color:#ffffff;
+    font-size:20px;
+    /*borderの角を半径10pxの角丸に*/
+    border-radius:10px;
+    border-bottom:4px solid #191970;
+}
+
+/*:activeはクリックしている間のスタイルを指定する疑似クラス*/
+a.button-link2:active{
+    /*クリックしているときにborder-bottomを消して*/
+    border-bottom:none;
+    /*ボタンを4px下に動かすことで実際にボタンが押しているように見える*/
+    transform:translateY(4px);
+}
+
+/*画面幅が960px以上の場合*/
+@media screen and (min-width:960px){
+    /*
+    :hoverのスタイルをモバイル端末で有効にしてしまうと、iPhoneなどのデバイスでは2回タップしないとリンク先に飛べないので注意
+    1回タップでホバー状態、2回タップでアクティブ状態といった問題が発生する。
+    */
+    a:hover{
+        opacity:0.7;
+    }
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}

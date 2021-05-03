@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----*/
+/*-----*/
+
+/*-----記述-----*/

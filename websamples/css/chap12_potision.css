@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+section{
+    background-color:azure;
+}
+section img{
+    width:100px;
+    /*position:fixed;*/
+    position:sticky;
+    top:10px;
+}

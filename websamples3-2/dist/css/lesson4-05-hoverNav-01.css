@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----*/
+/*-----*/
+
+/*-----記述-----*/
+
+/*ナビゲーションの装飾*/
+body{
+    height:2000px;
+}
+
+header{
+    width:100vw;
+}
+
+ul{
+    /*背景色は緑に。*/
+    background:#37bd82;
+    /*text-alignプロパティは、ブロックコンテナ内の行の揃え位置・均等割付を指定する際に使用します。*/
+    /*MDNより:text-align は CSS のプロパティで、ブロック要素または表セルボックスの水平方向の配置を設定します*/
+    /*　align=整列、って意味だよ　*/
+    text-align:center;
+}
+
+ul li{
+    /*ブロック要素であるli要素を横並びにしたいので、inline-blockとして扱うよ〜*/
+    display:inline-block;
+    /*子要素のposition基準として設定。「当店について」の子要素のposition基準だね。*/
+    position:relative;
+}
+
+ul li a{
+    /*
+    a要素はインライン要素であって、
+    インライン要素はmarginは左右のみ、paddingは四方に聞くけど上下に癖があるのでblock要素として扱うよ
+    */
+    display:block;
+    padding:1em;
+    /*
+    文字色はcolor:hoge;だよ！
+    背景色はbackground-color:hoge;だからね。
+    */
+    color:#fff;
+    /*文字の大きさ指定。これぐらいは覚えてるよね。*/
+    font-size:14px;
+    /*a要素は下線が装飾として施されているので、text-decoration:none;で下線を消してる。*/
+    /*ちなみにa要素のaはアンカー(anchor)のこと。リンクの出発点とか、リンクに引っ掛けるアンカーだね。*/
+    text-decoration:none;
+}
+
+/*ul li aに続く擬似要素の設定*/
+/*擬似要素は"要素の特定の部分"に対してスタイル付けをするために使用するモノ。*/
+ul li a::after{
+    content:url("../img/4-05-img/arrow.png");
+    /*左側のmarginを10pxの余白を設定*/
+    margin-left:10px;
+    /*vertical-align:hoge;は垂直方向の位置指定プロパティ*/
+    /*vertical-alignはインラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。*/
+    vertical-align:middle;
+}
+/*
+擬似クラスは擬似要素と違い、"選択された要素"に対して特定の状態を適用します。
+そのため、擬似クラスと擬似要素を同時に使う場合は擬似クラス＞擬似要素の順でスペースを空けずに書きます。
+(例 div:hover::before)
+*/
+/*:hoverはマウスが乗っかった時の挙動を設定するよ*/
+ul li a:hover{
+    background:#2c9869;
+}
+
+ul.sub-list{
+    /*48行目のul liをposition:relative;にしてるよ*/
+    /*すこしややこしいからあえてつけた <li id="touten">...</li> が親要素に当たるよ〜*/
+    position:absolute;
+    /*ul.sub-listの親要素であるli #touten のheightを100%の距離とし、100%移動してるよ。*/
+    /*つまり、親要素の高さ分topから下へ移動してるってことだね。*/
+    top:100%;
+    /*
+    ul.sub-listの左側をどれぐらい空けるかの設定だけど、0だから要素は左にぴったりくっついてる。
+    どこにくっついてるかっていうと、親要素であり基準の#toutenと同じ左側だね。
+    */
+    left:0;
+    /*不可視の設定*/
+    display:none;
+
+    border:2px dotted #000;
+}
+
+/*「当店について」の子要素「南口店」と「北口店」におけるcss*/
+ul.sub-list li{
+    /*親要素(#touten)と同じ横幅にするよ*/
+    width:100%;
+}
+
+/*何を言ってるcssなのかはひとつずつ分解していくとわかるかも*/
+/*ul.gnab-listの子孫要素であるli要素が複数あるよね。*/
+/*hoverされたそのli要素たちの子要素にあるul.sub-listを対象にしたCSSだよ〜*/
+ul.gnav-list li:hover>ul.sub-list{
+    /*
+    105行目でhoverしてない時はdisplay:none;で非表示にしてるけど、ここでhoverすると見えるようにしてるよ。
+    */
+    display:block;
+}
+
+/*ヘッダーの固定。スクロールしても流れないようにするよ〜*/
+header{
+    /*
+    36行目でwidth:100vw;と指定しているけど、これは子要素でpositionを使用する際に
+    親要素に幅を指定しないと子要素が治る最低限のサイズに縮小してしまうからである。
+    */
+    /*absoluteと同様に絶対位置指定ではあるが、fixedは常にページの上に浮いているのでスクロールしても流れない*/
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+main{
+    /*
+    fexedを設定された<header>...</header>は浮いているため、mainが下に潜り込んでしまう。
+    そのため、header分ぐらいのheightをmarginとして空けている
+    */
+    margin-top:60px;
+}
+
+.div01{
+    background:#ddd;
+    height:80vh;
+    width:80%;
+    margin:0 auto 40px;
+    border:1px dotted #000;
+}

@@ -1,0 +1,158 @@
+@charset "utf-8"; 
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+
+/*-----body部のcss記述-----*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    /*
+    imgタグはインライン要素なのでdivやpなどで囲むことでブロック要素として扱えるが、
+    ここではdisplay:block;でブロック要素として扱う指定
+    */
+    display:block;
+    /*最大幅の指定*/
+    max-width:100%;
+    /*確認用border*/
+    /*border:1px dotted #000;*/
+}
+
+.container{
+    /*コンテナ幅を1000pxから100％へ変更。最大幅を1000pxの設定を追加。*/
+    /*width:1000px;*/
+    width:100%;
+    max-width:1000px;
+    margin:20px auto;/*(上下20px 左右auto)*/
+}
+
+/*Gridの設定*/
+.container{
+    /*
+    -ms-は古いブラウザに対応させるための接頭辞であり、ベンダープレフィックスと言うよ
+    CssGridはIE11以下ではベンダープレフィックスや機能を補助する必要があるらしい。
+    */
+    /*以下二項目のdisplayでCssGridを有効にしてる*/
+    display:-ms-grid;
+    display:grid;
+    /*グリッドカラムの大きさを320pxから1frへと親要素に対して等分する設定に変更。*/
+    /*
+    -ms-grid-columns:320px 320px 320px;
+    grid-template-columns:320px 320px 320px;
+    */
+    -ms-grid-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr 1fr;
+    /*グリッドロウの大きさを240pxから1frへと親要素に対して等分する設定に変更。*/
+    /*
+    -ms-grid-rows:240px 240px;
+    grid-template-rows:240px 240px;
+    */
+    -ms-grid-rows:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-gap:20px;
+    /*確認用border*/
+    /*border:2px solid #000;*/
+}
+
+/*IE11用 アイテムの設定*/
+/*.container .itemの1番目の子要素に対するCSS*/
+.container .item:nth-child(1){
+    -ms-grid-row:1;/*1行目*/
+    -ms-grid-column:1;/*1列目*/
+}
+
+/*.container .itemの2番目の子要素に対するCSS*/
+.container .item:nth-child(2){
+    -ms-grid-row:1;/*1行目*/
+    -ms-grid-column:2;/*2列目*/
+}
+
+/*.container .itemの3番目の子要素に対するCSS*/
+.container .item:nth-child(3){
+    -ms-grid-row:1;/*1行目*/
+    -ms-grid-column:3;/*3列目*/
+}
+
+/*.container .itemの4番目の子要素に対するCSS*/
+.container .item:nth-child(4){
+    -ms-grid-row:2;/*2行目*/
+    -ms-grid-column:1;/*1列目*/
+}
+
+/*.container .itemの5番目の子要素に対するCSS*/
+.container .item:nth-child(5){
+    -ms-grid-row:2;/*2行目*/
+    -ms-grid-column:2;/*2列目*/
+}
+
+/*.container .itemの6番目の子要素に対するCSS*/
+.container .item:nth-child(6){
+    -ms-grid-row:2;/*2行目*/
+    -ms-grid-column:3;/*3列目*/
+}
+
+@media screen and (max-width:650px){
+    .container{
+        /*width:320px;*/
+        -ms-grid-columns:1fr 1fr;
+        grid-template-columns:1fr 1fr;
+        -ms-grid-rows:1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        grid-gap:10px;
+    }
+
+    /*IE11用 アイテムの"再"設定*/
+    /*.container .itemの1番目の子要素に対するCSS*/
+    .container .item:nth-child(1){
+        -ms-grid-row:1;/*1行目*/
+        -ms-grid-column:1;/*1列目*/
+    }
+
+    /*.container .itemの2番目の子要素に対するCSS*/
+    .container .item:nth-child(2){
+        -ms-grid-row:1;/*1行目*/
+        -ms-grid-column:2;/*2列目*/
+    }
+
+    /*.container .itemの3番目の子要素に対するCSS*/
+    .container .item:nth-child(3){
+        -ms-grid-row:1;/*1行目*/
+        -ms-grid-column:3;/*3列目*/
+    }
+
+    /*.container .itemの4番目の子要素に対するCSS*/
+    .container .item:nth-child(4){
+        -ms-grid-row:2;/*2行目*/
+        -ms-grid-column:1;/*1列目*/
+    }
+
+    /*.container .itemの5番目の子要素に対するCSS*/
+    .container .item:nth-child(5){
+        -ms-grid-row:2;/*2行目*/
+        -ms-grid-column:2;/*2列目*/
+    }
+
+    /*.container .itemの6番目の子要素に対するCSS*/
+    .container .item:nth-child(6){
+        -ms-grid-row:2;/*2行目*/
+        -ms-grid-column:3;/*3列目*/
+    }
+
+}

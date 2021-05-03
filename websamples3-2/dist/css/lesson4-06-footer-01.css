@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+/*-----共通CSS-----*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----*/
+/*-----*/
+
+/*-----記述-----*/
+footer{
+    width:100%;
+    /*何度も出ているけどこれは背景色の設定ね*/
+    background:#7b645d;
+    padding:60px 0;
+    /*ブロック要素に対して適用するCSSで、その適用するブロック要素が内包するインライン要素の配置を指定する*/
+    text-align:center;
+    /*こっちは文字の色ね*/
+    color:#504543;
+
+    border:1px dotted #e16b8c;
+}
+
+
+.footer-inner{
+    width:100%;
+    background:#fff;
+    /*marginの上下を0左右をautoにして中央配置にしてるよ*/
+    margin:0 auto;
+    /*上下左右に内余白60pxを設定*/
+    padding:60px;
+}
+
+/*ロゴとテキストの間に余白を設定*/
+img{
+    margin-bottom:20px;
+
+    border:1px dotted #e16b8c;
+}
+
+address{
+    margin-bottom:20px;
+    font-style:normal;
+    font-size:14px;
+
+    border:1px dotted #e16b8c;
+}
+
+.footer-inner nav{
+    /*下方に内余白20pxを設定*/
+    padding-bottom:20px;
+    /*仕切り線を設定*/
+    border-bottom:1px solid #ccc;
+    /*<p>タグとの余白を設定*/
+    margin-bottom:20px;
+
+    /*border:1px dotted #e16b8c;*/
+}
+
+.footer-inner nav ul{
+    /*liの装飾(リストマーカー)を削除。*/
+    list-style:none;
+
+    border:1px dotted #e16b8c;
+}
+
+.footer-inner nav li{
+    /*横並びにするよ*/
+    display:inline-block;
+
+    border:1px dotted #e16b8c;
+}
+
+a{
+    display:inline-block;
+    padding:0.5em;
+    /*<a>タグの装飾(下線)を削除*/
+    text-decoration:none;
+    color:#b48456;
+
+    border:1px dotted #e16b8c;
+}
+
+/*960px未満の画面幅に適応*/
+@media screen and (max-width:960px){
+    a:hover{
+        text-decoration:underline;
+    }
+}

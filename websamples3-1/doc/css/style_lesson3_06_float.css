@@ -1,0 +1,52 @@
+@charset "utf-8"; 
+/*-----start utility css-----*/
+*{
+    font-family:'Bitter','serif';
+}
+
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+/*-----end utility css-----*/
+
+section{
+    width:600px;
+    margin:0 auto;
+    padding:2em;
+    background-color:#ffebf0;
+    border:2px dotted #000000;
+}
+
+h1{
+    margin:0 0 1em;/*上　左右　下*/
+}
+
+img{
+    float:right;
+    width:320px;
+    /*下記marginは1文字分の余白を取る事でテキストとくっつかないようにしてるよ*/
+    margin-left:1em;
+    margin-bottom:1em;
+    border:2px dotted #000000;
+}
+
+
+p{
+    /*行の高さを指定*/
+    line-height:1.8;
+}
+

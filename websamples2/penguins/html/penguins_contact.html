@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ペンギン画像蒐集家｢Penguins｣ Official Website</title>
+        <!--GoogleFontsの導入-->
+        <!--記述箇所はpenguins_style.cssより先に記述する。
+            理由はフォントデータを参照して読み込むための記述なのでcssより先に記述して読み込む必要がある。-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+        <!--ここまでGoogleFontsの記述-->
+        <link href="../css/penguins_style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body id="contact">
+        <!--ヘッダー-->
+        <header>
+            <!--ロゴ-->
+            <div class="logo">
+                <a href="penguins_index.html"></a>
+                    <img src="../img/penguins_logo_small_2_white.png" alt="penguins">
+                </a>
+            </div>
+            <!--ナビゲーション-->
+            <nav>
+                <ul class="globalNav">
+                    <li><a href="penguins_portfolio.html">Portfolio</a></li>
+                    <li><a href="penguins_about.html">About</a></li>
+                    <li><a href="penguins_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="wrap">
+            <!--コンテンツ-->
+            <div class="content">
+                <div class="main-center">
+                    <h1>Contact</h1>
+                    <p>
+                        Penguinsへのアクセス方法、お問い合わせなどのフォームのページです。お気軽にお問い合わせください。
+                    </p>
+                    <section class="access clearFix">
+                        <h2 class="icon">Access</h2>
+                        <table>
+                            <tr>
+                                <th>所在地住所</th>
+                                <td>南極東オングル島<br>南緯69度00分22秒 東経39度35分24秒</td>
+                            </tr>
+                            <tr>
+                                <th>電話番号</th>
+                                <td>123-4567-8910</td>
+                            </tr>
+                            <tr>
+                                <th>電車でのアクセス</th>
+                                <td>不可能</td>
+                            </tr>
+                            <tr>
+                                <th>お車でのアクセス</th>
+                                <td>気合</td>
+                            </tr>
+                        </table>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5717.702897575499!2d39.59!3d-69.00611100000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb117e32542cebad9%3A0x35ed07a4f19b9692!2z5pit5ZKM5Z-65Zyw!5e0!3m2!1sja!2sjp!4v1615631664684!5m2!1sja!2sjp" width="460" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </section>
+                    <seciton>
+                        <h2 class="icon">Contact&nbsp;form</h2>
+                        <div class="form">
+                            <form action="#" method="POST">
+                                <dl>
+                                    <dt>
+                                        <span class="required">
+                                            <label for="name">お名前</label>
+                                        </span>
+                                    </dt>
+                                    <dd>
+                                        <input type="text" id ="name" name="name" class="name" placeholder="入力例:ジェンツーペンギン" required>
+                                    </dd>
+                                    <dt>
+                                        <span class="required">
+                                            <label for="email">メールアドレス</label>
+                                        </span>
+                                    </dt>
+                                    <dd>
+                                        <input type="email" id="email" name="email" class="email" placeholder="penguin_so_cute@gmail.com" required>
+                                    </dd>
+                                    <dt>
+                                        <label for="phoneNum">お電話番号</label>
+                                    </dt>
+                                    <dd>
+                                        <input type="tel" id="phoneNum" name="phoneNum" class="phoneNum" placeholder="xxx-xxxx-xxxx">
+                                    </dd>
+                                    <dt>
+                                        <label for="contactUsType">お問い合わせ種別</label>
+                                    </dt>
+                                    <dd>
+                                        <select id="contactUsType" name="contactUsType" class="contactUsType">
+                                            <option value="0">ペンギン画像蒐集</option>
+                                            <option value="1">ペンギン動画蒐集</option>
+                                            <option value="2">講演･各種メディア出演のご依頼</option>
+                                            <option value="3">その他お問い合わせ</option>
+                                        </select>
+                                    </dd>
+                                    <dt>
+                                        ご希望のご連絡方法
+                                    </dt>
+                                    <dd>
+                                        <input type="radio" id="howToContact_email" name="howToContact" class="howToContact" value="0">
+                                        <label for="howToContact_email">Eメール</label>
+                                        <input type="radio" id="howToContact_phone" name="howToContact" class="howToContact" value="1">
+                                        <label for="howToContact_phone">お電話 </label>
+                                        <input type="radio" id="howToContact_both" name="howToContact" class="howToContact" value="3">
+                                        <label for="howToContact_both">どちらでも構わない</label>
+                                    </dd>
+                                    <dt>
+                                        <label for="message">メッセージ</label>
+                                    </dt>
+                                    <dd>
+                                        <textarea id="message" name="message" class="message" placeholder="文字数制限はありません。"></textarea>
+                                    </dd>
+                                </dl>
+                                <button type="submit" class="btn">
+                                    送信
+                                </button>
+                                <div class="attention">
+                                    <ul class="note">
+                                        <li>「<span class="required"></span>」の付いている項目は必須項目です。<br></li>
+                                        <li>メッセージ送信後、48時間以内に担当者よりご連絡致します。</li>
+                                    </ul>
+                                </div>
+                            </form>
+                        </div>
+                    </seciton>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <samll>(C)2021 PENGUINISM.</samll>
+        </footer>
+    </body>
+</html>

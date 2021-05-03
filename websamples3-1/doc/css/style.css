@@ -1,0 +1,30 @@
+@charset "utf-8"; 
+
+*{
+    /*デフォルトフォントの指定(俺好み)*/
+    font-family:'Bitter','serif';
+    /*
+    box-sizing:hoge;で要素全体の幅と高さの計算方法を指定
+    box-sizing:border-box;でボックスサイズ(widthとheight)はボーダー領域までとなる。
+    */
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+
+/*-----以下body部のcss記述-----*/
+
+
+/*-----以上body部のcss記述-----*/

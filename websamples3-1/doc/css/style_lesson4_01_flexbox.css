@@ -1,0 +1,111 @@
+@charset "utf-8"; 
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:'Bitter','serif';
+}
+
+/*装飾css*/
+.icon_before:before{
+    content:"";
+    padding:0 10px 0 0 ;
+    border-left:7px solid #000000;
+}
+.icon_after:after{
+    content:"";
+    padding:0 0 0 10px ;
+    border-right:7px solid #000000;
+}
+
+/*-----body部のcss記述-----*/
+section{
+    /*視覚化border*/
+    border:2px dashed #cccccc;
+
+    /*section全体の横幅指定*/
+    width:90%;
+    /*内余白の上部を指定*/
+    padding-top:20px;
+    /*内余白の下部を指定*/
+    padding-bottom:40px;
+    /*外余白の全体を指定*/
+    margin:40px auto 0;/*上40px 左右auto(均等) 下0*/
+    /*
+    ブロック要素内のテキストの水平方向の位置を指定
+    ※text-alignおよびvertical-alignはインライン要素には使えないよ。
+    　使いたければ<div>とかで囲んでブロック要素にしよう。
+    */
+    text-align:center;
+}
+
+h2{
+    /*h2タグの外余白の下部を指定*/
+    margin-bottom:1em;
+}
+
+/*dlタグ内の設定*/
+/*フレックスコンテナcss*/
+.flex-container{
+    /*
+    .flex-containerを持つタグをflexとして扱う指定
+    display:flex;だけでもフレックスアイテム(ここでは.flex-itemを持つ子要素)が横並びになる。
+    */
+    display:flex;
+
+    /*
+    display:flex;の初期値では並び方向は横並び(左から右)。
+    一応、ちゃんと指定しておく。
+    */
+    flex-direction:row;
+    /*
+    子要素(ここでは.flex-itemを持つ要素)の余白が均等になる。
+    両端は各子要素同士の半分の余白が入る。
+    justify-content:...;はフレックスアイテムの余白を指定するプロパティだよ。
+    */
+    justify-content:space-around;
+}
+
+/*フレックスアイテムcss*/
+.flex-item{
+    /*フレックスアイテムの背景色を指定*/
+    background-color:#09b;
+    /*フレックスアイテム内の文字色を指定*/
+    color:#fff;
+    /*内余白を四方1em分空ける指定*/
+    padding:1em;
+    /*子要素(フレックスアイテム)の基本幅を指定*/
+    flex-basis:30%;
+}
+
+/*フレックスアイテムのdt(説明用語部分)css*/
+.flex-item dt{
+    /*外余白の下部を指定*/
+    margin-bottom:10px;
+    /*文字の大きさを指定*/
+    font-size:1.2em;
+    /*フォントのウェイト(太さ)を指定*/
+    font-weight:bold;
+}
+
+/*mediaクエリ*/
+/*横幅480px以下の端末に対するcss*/
+@media screen and (max-width:480px){
+    h2{
+        font-size:1.1em;
+    }
+
+    .flex-container{
+        /*
+        flex-direction:...;は主軸の方向や向きを定義するプロパティだよ。
+        フレックスアイテムの配置する方法を指定
+        */
+        flex-direction:column;
+    }
+    
+    .flex-item{
+        /*フレックスアイテムの外余白を指定*/
+        margin:0 1em 1em;/*上0 左右1文字分 下1文字分*/
+    }
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>会員リスト&nbsp;|&nbsp;会員管理&nbsp;|&nbsp;会員新規登録</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link href="/websamples/css/chap14_main.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/websamples/chap14/dashboard.html">ダッシュボード</a></li>
+                    <li><a href="/websamples/chap14/memberList.html">会員管理</a></li>
+                    <li><a href="#">受注管理</a></li>
+                    <li><a href="#">商品管理</a></li>
+                    <li><a href="#">マスター管理</a></li>
+                    <li><a href="#">ログイン情報</a></li>
+                </ul>
+            </nav>
+        </header>
+        <nav id="breadcrumb">
+            <ul>
+                <li><a href="/websamples/chap14/dashboad.html">ダッシュボード</a></li>
+                <li><a href="/websamples/chap14/memberList.html">会員リスト</a></li>
+                <li>会員新規登録</li>
+            </ul>
+        </nav>
+        <main>
+            <h2>会員管理</h2>
+            <section>
+                <h3>会員新規登録</h3>
+                <p>
+                必要事項を入力して、登録ボタンをクリックしてください。<br>
+                なお、会員IDはシステム側で自動採番します。
+                </p>
+                <!--以下のformタグで「この中は入力画面ですよー」と記してるよ-->
+                <!--入力された情報はaction先に送信しますよー。送信方法はmethodですよーって感じ。-->
+                <form action="/websamples/chap14/memberList.html" method="POST">
+                    <dl class="detail">
+                        <!--会員の姓情報入力部品(コントロール)-->
+                        <!--labelとして設定した文字列をクリックすると「その入力欄」にフォーカスが当たる。「その入力欄」はfor="..."だよ。-->
+                        <dt><label for="memberNameLast">会員&nbsp;姓</label></dt>
+                        <dd>
+                            <!--inputでコントロールを作成。どんなコントロールかはtypeで指定。nameはリクエストパラメータ名。placeholderは入力例。requiredは入力必須指定。-->
+                            <input type="text" name="memberNameLast" id="memberNameLast" placeholder="例:ジェンツー" required>
+                        </dd>
+                        <!--会員の名情報入力部品-->
+                        <dt><label for="memberNameFirst">会員&nbsp;名</label></dt>
+                        <dd>
+                            <input type="text" name="memberNameFirst" id="memberNameFirst" placeholder="例:ペンギン" required>
+                        </dd>
+                        <!--会員の姓ふりがな情報入力部品-->
+                        <dt><label for="memberNameLastKana">会員&nbsp;姓&nbsp;ふりがな</label></dt>
+                        <dd>
+                            <input type="text" name="memberNameLastKana" id="memberNameLastKana" placeholder="例:じぇんつー" required>
+                        </dd>
+                        <!--会員の名ふりがな情報入力部品-->
+                        <dt><label for="memberNameFirstKana">会員&nbsp;名&nbsp;ふりがな</label></dt>
+                        <dd>
+                            <input type="text" name="memberNameFirstKana" id="memberNameFirstKana" placeholder="例:ぺんぎん" required>
+                        </dd>
+                        <!--会員の電話番号情報入力部品-->
+                        <dt><label for="memberTel">電話番号</label></dt>
+                        <dd>
+                            <!--inputのtypeが"tel"なのに気をつけよう～!。-->
+                            <input type="tel" name="memberTel" id="memberTel" placeholder="00011112222" required>
+                        </dd>
+                        <!--会員の性別情報入力部品-->
+                        <!--labelの位置がdtタグではなくてinputに掛かるように変更されてるよ。-->
+                        <dt>性別</dt>
+                        <dd>
+                            <!--会員の性別(オス)のラジオボタン入力部品-->
+                            <label for="memberSexMale">
+                            <!--inputのtypeもtextじゃないしtelでもなくてradio。ラジオボタンだね。単一選択で用いるよ。-->
+                            <!--入力必須指定のrequiredがcheckedに変更されてるよ。requiredだとこのラジオボタンを必ず選択しなくちゃいけなくなる。-->
+                            <!--value="..."でこのラジオボタンが選択された場合のリクエストパラメータの実体になるよ。-->
+                            <!--ラジオボタンの忘れがちな点としてinputのnameは同一にしないと、複数のラジオボタンが選択できちゃうよ!-->
+                                <input type="radio" name="memberSex" id="memberSexMale" value="0" checked>オス
+                            </label>
+                            <!--会員の性別(メス)のラジオボタン入力部品-->
+                            <label for="memberSexFemale">
+                                <input type="radio" name="memberSex" id="memberSexFemale" value="1">メス
+                            </label>
+                        <!--会員の種類情報入力部品-->
+                        <dt>会員種類</dt>
+                        <dd>
+                            <!--ドロップダウンリストはselectタグだよ～。ここでも入力必須としてrequiredを指定しているよ。-->
+                            <select name="memberType" id="memberType" required>
+                                <!--selectのリスト(選択肢)はoptionタグで追加･削除できるよ。valueはリクエストパラメータの実体ね。-->
+                                <option value="">選択してください</option>
+                                <option value="1">通常</option>
+                                <option value="2">特別</option>
+                                <option value="3">優良</option>
+                                <option value="4">超優良</option>
+                            </select>
+                        </dd>
+                    </dl>
+                    <!--ここまでの入力情報を送信するコントロールを忘れずにね-->
+                    <p class="submitP">
+                        <button type="submit">登録</button>
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

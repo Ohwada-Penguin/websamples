@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>表のヘッダとボディ</title>
+        <link href="/websamples/css/chap11_css.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <section>
+            <h1>会員リスト</h1>
+            <!--table開始-->
+            <table>
+                <!--thead行-->
+                <!--<th scope="col">...</th>-->
+                <thead>
+                    <tr>
+                        <th scope="col">会員番号</th>
+                        <th scope="col">氏名</th>
+                        <th scope="col">入会年月</th>
+                    </tr>
+                </thead>
+                <!--<thead>を用いる時は<tbody>タグを忘れずにね。-->
+                <tbody>
+                    <!--一行目-->
+                    <tr>
+                        <td>0000001</td>
+                        <td>コウテイペンギン</td>
+                        <td>2019年3月</td>
+                    </tr>
+                    <!--二行目-->
+                    <tr>
+                        <td>0000002</td>
+                        <td>オウサマペンギン</td>
+                        <td>2019年4月</td>
+                    </tr>
+                    <!--三行目-->
+                    <tr>
+                        <td>0000003</td>
+                        <td>アデリーペンギン</td>
+                        <td>2019年5月</td>
+                        <!--<td>test</td>-->
+                    </tr>
+                </tbody>
+            </table>
+            <!--table終わり-->
+        </section>
+    </body>
+</html>

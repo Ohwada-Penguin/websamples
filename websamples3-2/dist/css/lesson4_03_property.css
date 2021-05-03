@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+div{
+    width: 100%;
+    height: 80vh;
+    border: 1px solid #ccc;
+    margin-bottom: 20vh;
+}
+
+/*attentionクラスを赤文字にする。*/
+.attention{
+    /*色名は紅梅、rgb(225, 107, 140)*/
+    color:#e16b8c;
+}
+
+/*<abbr>タグは、略語や頭字語であることを表す際に使用。属性値であるtitle="hoge"で詳細を記述可能*/
+abbr[title]{
+    text-decoration:underline double #e16b8c;
+    text-decoration-thickness:0.1rem;
+    /*
+    text-decortion-line: hoge;
+    text-decoration-style: hoge;
+    text-decoration-color: hoge;
+    text-decoration-thickness: hoge;
+    */
+}
+
+/*-----hoge-----*/
+
+.bg-001{
+    background:url("../img/4-03_img/bg-stripe.png") left center repeat;
+    /*background: url("imgのディレクトリ") 水平位置 垂直位置 repeatの有無;*/
+}
+
+.bg-002{
+    background:#99807b url("../img/4-03_img/bg-cat.png") center bottom no-repeat;
+}
+
+.px,.per,.cover,.contain{
+    background:url("../img/4-03_img/bg-cat-light.png") right bottom no-repeat;
+}
+
+.px{
+    background-size:150px 50px;
+}
+
+.per{
+    background-size:50% 50%;
+}
+
+.cover{
+    background-size:cover;
+}
+
+.contain{
+    background-size:contain;
+}
+
+.bg-001-layer{
+    background:
+        url("../img/4-03_img/bg-cat.png") left bottom no-repeat,/*カンマ区切り忘れずになァ*/
+        url("../img/4-03_img/bg-stripe.png") center center repeat;
+}
+
+.bg-002-gradation{
+    background:
+    url("../img/4-03_img/bg-frame.png") center center repeat,
+    /*linear-gradient(角度(デフォは180度(真上から下へグラデ),１色目,２色目)*/
+    linear-gradient(-135deg,#ffd5c9,#ff6464);
+}

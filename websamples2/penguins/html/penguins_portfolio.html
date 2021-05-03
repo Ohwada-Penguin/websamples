@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <!---->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <!---->
+        <title>Portfolio&nbsp;|&nbsp;ペンギン画像蒐集家｢Penguins｣</title>
+        <!--GoogleFontsの導入-->
+        <!--記述箇所はpenguins_style.cssより先に記述する。
+            理由はフォントデータを参照して読み込むための記述なのでcssより先に記述して読み込む必要がある。-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&display=swap" rel="stylesheet">
+        <!--ここまでGoogleFontsの記述-->
+        <link href="../css/penguins_style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body id="portFolio">
+        <!--ヘッダー-->
+        <header>
+            <!--ロゴ-->
+            <div class="logo">
+                <a href="penguins_index.html"></a>
+                    <img src="../img/penguins_logo_small_2_white.png" alt="penguins">
+                </a>
+            </div>
+            <!--ナビゲーション-->
+            <nav>
+                <ul class="globalNav">
+                    <li><a href="penguins_portfolio.html">Portfolio</a></li>
+                    <li><a href="penguins_about.html">About</a></li>
+                    <li><a href="penguins_contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--wrap始まり-->
+        <div id="wrap" class="clearFix">
+            <!--コンテンツエリア-->
+            <div class="content">
+                <!--メインエリア-->
+                <div class="main">
+                    <h1>Portfolio</h1>
+                    <p>これまでに集めた画像や映像作品を掲載しています。</p>
+                    <!--メインエリアのセクション1(photos)-->
+                    <section>
+                        <h2>
+                            <a href="photoGraph.html"><img src="../img/penguins_portFolio_section_01_900300.jpg" alt="PHOTOGRAPH"></a>
+                        </h2>
+                        <p>
+                            Penguinsでは｢ペンギン-Penguin｣｢可愛い-Cute｣｢愛くるしい-Lovely｣の3つの要素で主に｢コウテイペンギンの姿｣を集めてします。<br>
+                            南極という極寒の極地であっても確かに、そして逞しく生きるコウテイペンギンの姿がそこにあり、それでいて可愛さを兼ね備えた彼ら彼女らの姿に興味を持っていただければ幸いです。<br>
+                            他にもキングペンギンやアデリーペンギンなども掲載しています。<br>
+                            <a href="photoGraph.html">詳しくはこちら>></a>
+                        </p>
+                    </section>
+                    <!--メインエリアのセクション2(videos)-->
+                    <section>
+                        <h2>
+                            <a href="videos.html"><img src="../img/penguins_portFolio_section_02_900300.jpg" alt="VIDEOS"></a>
+                        </h2>
+                        <p>
+                            Penguinsではペンギンの愛くるしい姿の映像も集めています。<br>
+                            ほとんどがYoutubeで集めた映像となりますが、愛くるしく応援したくなるようなペンギンたちをぜひご覧になってみてください。<br>
+                            <a href="videos.html">詳しくはこちら>></a>
+                        </p>
+                    </section>
+                </div>
+
+                <!--サイドバーエリア-->
+                <aside class="sidebar">
+                    <!--サイドバーエリアのセクション1(photos)-->
+                    <section class="sidebar_section">
+                        <h2>Photograph</h2>
+                        <ul>
+                            <li><a href="penguins_photoGraph.html#emperorPenguin" target="emperorPenguin">コウテイペンギン-EmperorPenguin</a></li>
+                            <li><a href="penguins_photoGraph.html#kingPenguin" target="kingPenguin">オウサマペンギン-KingPenguin</a></li>
+                            <li><a href="penguins_photoGraph.html#adeliePenguin" target="adeliePenguin">アデリーペンギン-AdeliePenguin</a></li>
+                        </ul>
+                    </section>
+                    <!--サイドバーエリアのセクション2(videos)-->
+                    <seciton class="sidebar_section">
+                        <h2>Videos</h2>
+                        <ul>
+                            <li><a href="videos.html#movie" target="movie">Movie</a></li>
+                            <li><a href="videos.html#short-movie">Short&nbsp;Movie</a></li>
+                        </ul>
+                    </seciton>
+                </aside>
+            </div>
+        </div>
+
+        <footer>
+            <samll>(C)2021 PENGUINISM.</samll>
+        </footer>
+    </body>
+</html>
